@@ -34,10 +34,10 @@ function NavBar() {
       document.body.classList.add('light-mode');
     }
   };
-useEffect(()=>{
-  document.body.classList.add("light-mode")
-  setDarkMode()
-},[])
+  useEffect(() => {
+    document.body.classList.add("light-mode")
+    setDarkMode()
+  }, [])
 
 
   const handleCloseNavMenu = () => {
@@ -183,12 +183,13 @@ useEffect(()=>{
             </Button>
 
             <Tooltip title="Toogle Theme">
-              <IconButton onClick={handleDarkModeToggle} 
-              sx={{ p: 0, 
-                color: 'inherit', 
-                '&:focus': { outline: 'none' },
-                justifyContent: 'flex-end',
-                
+              <IconButton onClick={handleDarkModeToggle}
+                sx={{
+                  p: 0,
+                  color: 'inherit',
+                  '&:focus': { outline: 'none' },
+                  justifyContent: 'flex-end',
+
                 }}>
                 <DarkModeTwoToneIcon />
               </IconButton>
