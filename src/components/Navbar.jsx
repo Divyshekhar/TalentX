@@ -12,8 +12,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Groups2Icon from "@mui/icons-material/Groups2";
 import PropTypes from 'prop-types';
-
-
 import DarkModeTwoToneIcon from '@mui/icons-material/DarkModeTwoTone';
 const pages = ['About Us', 'Services', 'Contact Us'];
 
@@ -40,6 +38,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
             href="/home"
             noWrap
             sx={{
+              
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
@@ -117,7 +116,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2, 
-                  color: darkTheme ? 'red' : 'yellow',
+                  color: darkTheme ? 'white' : 'black',
                   display: 'block',
                   fontWeight: 'bold',
                   fontSize: '16px',
