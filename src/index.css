@@ -29,15 +29,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 body.dark-mode
 {
   background-color: rgb(28,26,39);
+  color: "white";
 }
 body.light-mode
 {
   background-color: rgb(255,255,255);
+  color: "black";
 }
-
 
 h1 {
   font-size: 3.2em;

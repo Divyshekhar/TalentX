@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,33 +11,18 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Groups2Icon from "@mui/icons-material/Groups2";
+import PropTypes from 'prop-types';
+
 
 import DarkModeTwoToneIcon from '@mui/icons-material/DarkModeTwoTone';
 const pages = ['About Us', 'Services', 'Contact Us'];
 
-function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [darkMode, setDarkMode] = useState(false)
-
+function NavBar({ darkTheme, setDarkTheme }) {
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleDarkModeToggle = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.body.classList.remove('light-mode');
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-      document.body.classList.add('light-mode');
-    }
-  };
-  useEffect(() => {
-    document.body.classList.add("light-mode")
-    setDarkMode()
-  }, [])
-
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -46,7 +30,7 @@ function NavBar() {
 
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'rgba(25,118,210,1)' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: 'rgba(25,118,210,1)'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Groups2Icon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -132,7 +116,8 @@ function NavBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
-                  my: 2, color: 'white',
+                  my: 2, 
+                  color: darkTheme ? 'red' : 'yellow',
                   display: 'block',
                   fontWeight: 'bold',
                   fontSize: '16px',
@@ -183,7 +168,9 @@ function NavBar() {
             </Button>
 
             <Tooltip title="Toogle Theme">
-              <IconButton onClick={handleDarkModeToggle}
+              <IconButton onClick={() => {
+                setDarkTheme(prevState => !prevState);
+              }}
                 sx={{
                   p: 0,
                   color: 'inherit',
@@ -200,4 +187,11 @@ function NavBar() {
     </AppBar>
   );
 }
+
+NavBar.propTypes = {
+  setDarkTheme: PropTypes.func.isRequired,
+  darkTheme: PropTypes.bool.isRequired
+};
+
+
 export default NavBar
