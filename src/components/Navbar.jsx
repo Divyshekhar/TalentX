@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -33,6 +34,10 @@ function NavBar() {
       document.body.classList.add('light-mode');
     }
   };
+useEffect(()=>{
+  document.body.classList.add("light-mode")
+  setDarkMode()
+},[])
 
 
   const handleCloseNavMenu = () => {
