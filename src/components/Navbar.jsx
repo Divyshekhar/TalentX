@@ -13,7 +13,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Groups2Icon from "@mui/icons-material/Groups2";
 import PropTypes from 'prop-types';
 import DarkModeTwoToneIcon from '@mui/icons-material/DarkModeTwoTone';
-const pages = ['About Us', 'Services', 'Contact Us'];
+import { NavLink } from 'react-router-dom';
+const pages = [
+   { name: "Home", path: "/"},
+   { name: "About Us", path: "/about"},
+   { name: "Contact Us", path: "/contact"},
+
+];
 
 function NavBar({ darkTheme, setDarkTheme }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,8 +40,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
           <Groups2Icon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
-            component="a"
-            href="/home"
+            component= {NavLink}
+            to="/"
             noWrap
             sx={{
               
@@ -83,8 +89,10 @@ function NavBar({ darkTheme, setDarkTheme }) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center">
+                    <NavLink to={page.path}>{page.name}</NavLink>
+                    </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -112,8 +120,10 @@ function NavBar({ darkTheme, setDarkTheme }) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
+                component={NavLink}
+                to={page.path}
                 sx={{
                   my: 2, 
                   color: darkTheme ? 'white' : 'black',
@@ -125,7 +135,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
                   '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
 
                 }}>
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>

@@ -1,17 +1,40 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar'
 import { Box } from '@mui/material';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
   return (
-    <Box
-      height={'100vh'}
-      width={'100vw'}
-    sx={{backgroundColor:darkTheme?'#242424':'white'}}
-    >
+    <Router>
 
-      <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-    </Box>
+      <Box
+        sx={{
+          backgroundColor: darkTheme ? '#242424' : 'white',
+          transition:'background-color 0.3 ease'
+
+        }}
+      >
+        <Box>
+          <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+        </Box>
+        <Box sx={{ mt: 8, minHeight: "100vh" }}>
+          <Routes>
+            <Route path='/'  element={<Home darkTheme={darkTheme} />}/>
+            <Route path="/contact" element={<ContactUs darkTheme={darkTheme}/>} />
+            <Route path="/about" element={<AboutUs darkTheme={darkTheme}/>} />
+            <Route path="*" element={<NotFound darkTheme={darkTheme} />} />
+          </Routes>
+          </Box>
+        <Footer />
+      </Box>
+    </Router>
+
   );
 }
 
