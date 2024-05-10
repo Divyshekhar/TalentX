@@ -8,7 +8,7 @@ function Footer(){
         backgroundColor: "#424242",
         color: "#fff",
         width: '100vw',
-        height: '50vh'
+        height: '30vh'
       }}
     >
       <Container maxWidth="100%">
