@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import backgroundImg from '../assets/backgr.jpg'
 import {useRef} from 'react';
@@ -72,7 +72,17 @@ function Home({darkTheme}){
           ref={bottomSectionRef}
           color={darkTheme?"white":"black"}
           >
-        <h1>hellow</h1>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+              <h1>Title 1 Will be here</h1>
+              <Typography>
+                    this is the details about the title one which will go here below the title of the thingy thing thing
+              </Typography>
+          </Grid>
+        </Grid>
+
+        <br/>
+              
         </Box>
       
       </Box> 
