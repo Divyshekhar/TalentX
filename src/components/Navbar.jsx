@@ -37,7 +37,11 @@ function NavBar({ darkTheme, setDarkTheme }) {
     <AppBar position="fixed" sx={{ backgroundColor: 'rgba(25,118,210,1)'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Groups2Icon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Groups2Icon sx={{ 
+            display: { xs: 'none', md: 'flex' }, 
+            color: darkTheme?"white":"black",
+            transition: 'color 0.3s ease-in-out',
+            mr: 1 }} />
           <Typography
             variant="h6"
             component= {NavLink}
@@ -50,9 +54,10 @@ function NavBar({ darkTheme, setDarkTheme }) {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.2rem',
-              color: 'inherit',
+              color: darkTheme?"white":"black",
               textDecoration: 'none',
-              fontSize: '35px'
+              fontSize: '35px',
+              transition: 'color 0.3s ease-in-out'
             }}
           >
             TalentX
@@ -110,7 +115,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: darkTheme?"whtie":"black",
               textDecoration: 'none',
               fontSize: '20px'
             }}
