@@ -12,11 +12,13 @@ function Footer(){
       }}
     >
       <Container maxWidth="100%">
-        <Typography variant="body1" align="left">
-          © {new Date().getFullYear()} TalentX <br />
-          All Rights Reserved.
+        <Typography variant="h4" align="center">
+          CareerNed Pvt. Ltd.<br /> TalentX <br />
+          </Typography>
+          <Typography align="center">
+          © {new Date().getFullYear()}<br/>All Rights Reserved.
         </Typography>
-        <Typography variant="body2" align="left">
+        <Typography variant="body2" align="center">
           Made with ❤️ by <Link href="https://www.example.com/">Your Name</Link>
         </Typography>
       </Container>

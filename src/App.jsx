@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import NotFound from './pages/NotFound';
+import Subscriptions from './pages/Subscriptions';
 import Home from './pages/Home';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/'  element={<Home darkTheme={darkTheme} />}/>
             <Route path="/contact" element={<ContactUs darkTheme={darkTheme}/>} />
             <Route path="/about" element={<AboutUs darkTheme={darkTheme}/>} />
+            <Route path="/subscriptions" element={<Subscriptions darkTheme={darkTheme}/>} />
             <Route path="*" element={<NotFound darkTheme={darkTheme} />} />
           </Routes>
           </Box>

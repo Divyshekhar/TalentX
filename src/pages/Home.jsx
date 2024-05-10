@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography, Tooltip} from "@mui/material";
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import PropTypes from "prop-types";
 import backgroundImg from '../assets/backgr.jpg'
+import webImg from '../assets/file.png'
 import { useRef, useState, useEffect } from 'react';
 
 function Home({ darkTheme }) {
@@ -40,14 +41,12 @@ function Home({ darkTheme }) {
           sx={{
             backgroundImage: `url(${backgroundImg})`,
             backgroundRepeat: "no-repeat",
-            minHeight: "80vh",
-            minWidth: "100%",
+            minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "",
+            justifyContent: "center",
             alignItems: "left",
-            marginTop: "50px",
-            paddingTop: "100px"
+           
           }}
         >
           <Typography
@@ -96,15 +95,16 @@ function Home({ darkTheme }) {
         >
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <h1>Title 1 Will be here</h1>
-              <Typography>
-                this is the details about the title one which will go here below the title of the thingy thing thing
-              </Typography>
+            <img
+                  src={webImg}
+                  alt="Your Image"
+                  style={{ width: "78%", height: '86%', paddingBottom:0}}
+                />
             </Grid>
             <Grid item xs={6}>
-              <h1>Title 2  / image Will be here</h1>
+              <h1>Web Development</h1>
               <Typography>
-                this is the details about the title one which will go here below the title of the thingy thing thing
+                  this is the details about the web development field of operation and its working
               </Typography>
             </Grid>
             <Grid item xs={6}>

@@ -18,6 +18,7 @@ const pages = [
    { name: "Home", path: "/"},
    { name: "About Us", path: "/about"},
    { name: "Contact Us", path: "/contact"},
+   { name: "subscription", path: "/subscriptions" }
 
 ];
 
@@ -34,7 +35,11 @@ function NavBar({ darkTheme, setDarkTheme }) {
 
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'rgba(25,118,210,1)'}}>
+    <AppBar position="fixed" sx={{
+        backgroundColor: darkTheme?'rgb(156,39,176)':'rgba(25,118,210,1)',
+        transition: 'backgroundColor 0.3s ease-in-out'
+        
+        }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Groups2Icon sx={{ 
