@@ -146,7 +146,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
               color="primary"
               onClick={() => { /* Add your button click handler here */ }}
               sx={{
-                mr: 1, fontColor: 'white',
+                mr: 1, 
+                color: darkTheme?"white":"black",
                 fontWeight: 'bold',
                 fontSize: '12px',
                 justifyContent: 'flex-end',
@@ -164,7 +165,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
               color="primary"
               onClick={() => { /* Add your button click handler here */ }}
               sx={{
-                mr: 1, fontColor: 'white',
+                mr: 1, 
+                color: darkTheme?"white":"black",
                 fontWeight: 'bold',
                 fontSize: '12px',
                 justifyContent: 'flex-end',

@@ -79,6 +79,24 @@ function Home({darkTheme}){
                     this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
           </Grid>
+          <Grid item xs={6}>
+          <h1>Title 2  / image Will be here</h1>
+              <Typography>
+                    this is the details about the title one which will go here below the title of the thingy thing thing
+              </Typography>
+          </Grid>
+          <Grid item xs={6}>
+          <h1>Title 2  / image Will be here</h1>
+              <Typography>
+                    this is the details about the title one which will go here below the title of the thingy thing thing
+              </Typography>
+          </Grid>
+           <Grid item xs={6} >
+          <h1>Title 2  / image Will be here</h1>
+              <Typography>
+                    this is the details about the title one which will go here below the title of the thingy thing thing
+              </Typography>
+          </Grid>
         </Grid>
 
         <br/>

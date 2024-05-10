@@ -6,7 +6,8 @@ function NotFound({darkTheme}){
         display={"flex"}
         justifyContent={"center"}
         sx={{ p: "20px", 
-            color: darkTheme ? "white":"black"
+            color: darkTheme ? "white":"black",
+            transition: "color 0.3s ease-in-out"
 
         }}>
         <h2>404 Page Not Found</h2>

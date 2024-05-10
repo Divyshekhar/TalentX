@@ -16,7 +16,7 @@ function App() {
       <Box
         sx={{
           backgroundColor: darkTheme ? '#242424' : 'white',
-          transition:'background-color 0.3 ease'
+          transition:'background-color 0.2s ease-in-out'
 
         }}
       >
