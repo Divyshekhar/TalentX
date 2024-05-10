@@ -56,7 +56,7 @@ function Home({darkTheme}){
             <Button
               onClick={handleScrollToBottom}
               variant="contained"
-              color="primary"
+              color="secondary"
               sx={{
                 borderRadius: "25px",
                 padding: "15px 30px",
@@ -67,6 +67,12 @@ function Home({darkTheme}){
               Scroll Down
             </Button>
           </Box>
+        </Box>
+        <Box 
+          ref={bottomSectionRef}
+          color={darkTheme?"white":"black"}
+          >
+        <h1>hellow</h1>
         </Box>
       
       </Box> 
