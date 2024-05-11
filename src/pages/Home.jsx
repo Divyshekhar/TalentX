@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import backgroundImg from '../assets/backgr.jpg'
 import webImg from '../assets/file.png'
 import { useRef, useState, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 function Home({ darkTheme }) {
 
@@ -12,6 +14,9 @@ function Home({ darkTheme }) {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
+
+      Aos.init();
+
     const handleScroll = () => {
       if (window.pageYOffset > 170) { // Change 100 to the desired scroll position
         setShowScrollButton(true);
@@ -90,30 +95,31 @@ function Home({ darkTheme }) {
           </Box>
         </Box>
         <Box
+          paddingTop='60px'
           ref={bottomSectionRef}
           color={darkTheme ? "white" : "black"}
         >
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={6} data-aos='fade-right' data-aos-delay='190'>
             <img
                   src={webImg}
                   alt="Your Image"
                   style={{ width: "78%", height: '86%', paddingBottom:0}}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='190'>
               <h1>Web Development</h1>
               <Typography>
                   this is the details about the web development field of operation and its working
               </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <h1>Title 2  / image Will be here</h1>
+            <Grid item xs={6} data-aos='fade-right' data-aos-delay='190'>
+              <h1>Description 2  / image Will be here</h1>
               <Typography>
                 this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
             </Grid>
-            <Grid item xs={6} >
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='190'>
               <h1>Title 2  / image Will be here</h1>
               <Typography>
                 this is the details about the title one which will go here below the title of the thingy thing thing
