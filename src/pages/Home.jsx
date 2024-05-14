@@ -41,7 +41,9 @@ function Home({ darkTheme }) {
 
   return (
     <>
-      <Box>
+      <Box
+        sx={{overflowX:'hidden'}} //to remove the overflow due to AOS animation
+      >
         <Box ref={topSectionRef}
           sx={{
             backgroundImage: `url(${backgroundImg})`,
@@ -51,7 +53,6 @@ function Home({ darkTheme }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "left",
-           
           }}
         >
           <Typography
@@ -100,26 +101,31 @@ function Home({ darkTheme }) {
           color={darkTheme ? "white" : "black"}
         >
           <Grid container spacing={2}>
-            <Grid item xs={6} data-aos='fade-right' data-aos-delay='190'>
+            <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
             <img
                   src={webImg}
                   alt="Your Image"
                   style={{ width: "78%", height: '86%', paddingBottom:0}}
                 />
             </Grid>
-            <Grid item xs={6} data-aos='fade-left' data-aos-delay='190'>
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200' 
+              sx={{
+                overflowX:'hidden'}}>
+            
               <h1>Web Development</h1>
               <Typography>
                   this is the details about the web development field of operation and its working
               </Typography>
             </Grid>
-            <Grid item xs={6} data-aos='fade-right' data-aos-delay='190'>
+            <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
               <h1>Description 2  / image Will be here</h1>
               <Typography>
                 this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
             </Grid>
-            <Grid item xs={6} data-aos='fade-left' data-aos-delay='190'>
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'
+              sx={{overflowX:'hidden'}}
+            >
               <h1>Title 2  / image Will be here</h1>
               <Typography>
                 this is the details about the title one which will go here below the title of the thingy thing thing

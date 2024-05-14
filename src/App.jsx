@@ -9,6 +9,8 @@ import AboutUs from './pages/AboutUs';
 import NotFound from './pages/NotFound';
 import Subscriptions from './pages/Subscriptions';
 import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import Register from './pages/Register';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -32,6 +34,8 @@ function App() {
             <Route path="/about" element={<AboutUs darkTheme={darkTheme}/>} />
             <Route path="/subscriptions" element={<Subscriptions darkTheme={darkTheme}/>} />
             <Route path="*" element={<NotFound darkTheme={darkTheme} />} />
+            <Route path="/signin" element={<SignIn darkTheme={darkTheme}/>} />
+            <Route path="/register" element={<Register darkTheme={darkTheme} />} />
           </Routes>
           </Box>
         <Footer />

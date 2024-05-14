@@ -154,7 +154,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
             <Button
               variant="contain"
               color="primary"
-              onClick={() => { /* Add your button click handler here */ }}
+              component= {NavLink}
+              to='/signin'
               sx={{
                 mr: 1, 
                 color: darkTheme?"white":"black",
@@ -173,7 +174,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
             <Button
               variant="contain"
               color="primary"
-              onClick={() => { /* Add your button click handler here */ }}
+              component={NavLink}
+              to='/register'
               sx={{
                 mr: 1, 
                 color: darkTheme?"white":"black",
