@@ -60,47 +60,51 @@ function Home({ darkTheme }) {
             
           }}
         >
-          <Typography
-            variant="h2"
-            sx={{
-              paddingLeft: '50px',
-              pt: '60px',
-              color: darkTheme?'white':'black',
-              lineHeight: "1.5",
-              fontFamily: "Roboto Mono",
-              fontWeight: "Bold",
-            }}
-          >
-            Meet TalentX
-          </Typography>
-          <Typography
-            variant="h5"
-            sx={{color: darkTheme?'white':'black', 
-                lineHeight: "1.5", 
-                paddingLeft: '50px' 
-            }}>
-            Get the most skilled workforce at the most affordable pricing
-            <br />
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
-          </Typography>
-          <Box
-            paddingTop='50px'
-            paddingLeft='150px'
-          >
-            <Button
-              onClick={handleScrollToBottom}
-              variant="contained"
-              color={darkTheme ? "secondary" : "primary"}
+          <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <Typography
+              variant="h2"
               sx={{
-                borderRadius: "25px",
-                padding: "15px 30px",
-                fontSize: "16px",
-                '&:focus': { outline: 'none' }
+                paddingLeft: '50px',
+                pt: '60px',
+                color: darkTheme?'white':'black',
+                lineHeight: "1.5",
+                fontFamily: "Roboto Mono",
+                fontWeight: "Bold",
               }}
             >
-              Scroll Down
-            </Button>
-          </Box>
+              Meet TalentX
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{color: darkTheme?'white':'black', 
+                  lineHeight: "1.5", 
+                  paddingLeft: '50px' 
+              }}>
+              Get the most skilled workforce at the most affordable pricing
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
+            </Typography>
+            <Box
+              paddingTop='50px'
+              paddingLeft='150px'
+            >
+              <Button
+                onClick={handleScrollToBottom}
+                variant="contained"
+                color={darkTheme ? "secondary" : "primary"}
+                sx={{
+                  borderRadius: "25px",
+                  padding: "15px 30px",
+                  fontSize: "16px",
+                  '&:focus': { outline: 'none' }
+                }}
+              >
+                Scroll Down
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
         </Box>
         <Box
           paddingTop='60px'

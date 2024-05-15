@@ -18,7 +18,7 @@ const pages = [
    { name: "Home", path: "/"},
    { name: "About Us", path: "/about"},
    { name: "Contact Us", path: "/contact"},
-   { name: "subscription", path: "/subscriptions" }
+   { name: "Subscription", path: "/subscriptions" }
 
 ];
 
@@ -111,8 +111,8 @@ function NavBar({ darkTheme, setDarkTheme }) {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component= {NavLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
