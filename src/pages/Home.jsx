@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography, Tooltip} from "@mui/material";
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import PropTypes from "prop-types";
-import backgroundImg from '../assets/backgr.jpg'
+import backgroundImg from '../assets/back2.jpeg'
 import webImg from '../assets/file.png'
 import { useRef, useState, useEffect } from 'react';
 import Aos from 'aos';
@@ -16,6 +16,8 @@ function Home({ darkTheme }) {
   useEffect(() => {
 
       Aos.init();
+      window.addEventListener('load', Aos.refresh);
+
 
     const handleScroll = () => {
       if (window.pageYOffset > 170) { // Change 100 to the desired scroll position
@@ -53,6 +55,9 @@ function Home({ darkTheme }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "left",
+            backgroundPositionX: "70%",
+            backgroundPositionY: "30%",
+            
           }}
         >
           <Typography
@@ -60,7 +65,7 @@ function Home({ darkTheme }) {
             sx={{
               paddingLeft: '50px',
               pt: '60px',
-              color: "#fff",
+              color: darkTheme?'white':'black',
               lineHeight: "1.5",
               fontFamily: "Roboto Mono",
               fontWeight: "Bold",
@@ -70,8 +75,10 @@ function Home({ darkTheme }) {
           </Typography>
           <Typography
             variant="h5"
-            sx={{ color: "#fff", lineHeight: "1.5", paddingLeft: '50px' }}
-          >
+            sx={{color: darkTheme?'white':'black', 
+                lineHeight: "1.5", 
+                paddingLeft: '50px' 
+            }}>
             Get the most skilled workforce at the most affordable pricing
             <br />
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
@@ -108,9 +115,7 @@ function Home({ darkTheme }) {
                   style={{ width: "78%", height: '86%', paddingBottom:0}}
                 />
             </Grid>
-            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200' 
-              sx={{
-                overflowX:'hidden'}}>
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
             
               <h1>Web Development</h1>
               <Typography>
@@ -123,9 +128,7 @@ function Home({ darkTheme }) {
                 this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
             </Grid>
-            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'
-              sx={{overflowX:'hidden'}}
-            >
+            <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
               <h1>Title 2  / image Will be here</h1>
               <Typography>
                 this is the details about the title one which will go here below the title of the thingy thing thing
