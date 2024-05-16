@@ -2,6 +2,7 @@ import { Box, Button, Grid, Tooltip, Typography } from "@mui/material";
 import PropTypes from 'prop-types';
 import month3 from '../assets/3month.jpeg';
 import month6 from '../assets/6month.jpeg';
+import month9 from '../assets/9month.jpeg';
 import month12 from '../assets/12month.jpeg';
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import Aos from 'aos';
@@ -127,7 +128,7 @@ function Subscriptions({ darkTheme }) {
 
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
-                    <img src={month6} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={month9} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-right' data-aos-delay='100'>
                     <img src={month12} alt="3monthlogo" width={'70%%'} height={'50%'} />

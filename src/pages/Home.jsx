@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography, Tooltip} from "@mui/material";
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import PropTypes from "prop-types";
 import backgroundImg from '../assets/back2.jpeg'
-import webImg from '../assets/file.png'
+import webLight from '../assets/web light.png'
 import { useRef, useState, useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
@@ -114,10 +114,10 @@ function Home({ darkTheme }) {
           <Grid container spacing={2}>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
             <img
-                  src={webImg}
+                  src={webLight}
                   alt="Your Image"
                   style={{ width: "78%", height: '86%', paddingBottom:0}}
-                />
+                  />
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
             
