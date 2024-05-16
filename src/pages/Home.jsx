@@ -1,9 +1,10 @@
-import { Box, Button, Grid, Typography, Tooltip} from "@mui/material";
+import { Box, Button, Grid, Typography, Tooltip } from "@mui/material";
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import PropTypes from "prop-types";
 import backgroundImg from '../assets/back2.jpeg'
 import webLight from '../assets/web light.png'
 import { useRef, useState, useEffect } from 'react';
+import Finance from '../assets/finance.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
@@ -15,8 +16,8 @@ function Home({ darkTheme }) {
 
   useEffect(() => {
 
-      Aos.init();
-      window.addEventListener('load', Aos.refresh);
+    Aos.init();
+    window.addEventListener('load', Aos.refresh);
 
 
     const handleScroll = () => {
@@ -44,7 +45,7 @@ function Home({ darkTheme }) {
   return (
     <>
       <Box
-        sx={{overflowX:'hidden'}} //to remove the overflow due to AOS animation
+        sx={{ overflowX: 'hidden' }} //to remove the overflow due to AOS animation
       >
         <Box ref={topSectionRef}
           sx={{
@@ -57,54 +58,55 @@ function Home({ darkTheme }) {
             alignItems: "left",
             backgroundPositionX: "70%",
             backgroundPositionY: "30%",
-            
+
           }}
         >
           <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Typography
-              variant="h2"
-              sx={{
-                paddingLeft: '50px',
-                pt: '60px',
-                color: darkTheme?'white':'black',
-                lineHeight: "1.5",
-                fontFamily: "Roboto Mono",
-                fontWeight: "Bold",
-              }}
-            >
-              Meet TalentX
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{color: darkTheme?'white':'black', 
-                  lineHeight: "1.5", 
-                  paddingLeft: '50px' 
-              }}>
-              Get the most skilled workforce at the most affordable pricing
-              <br />
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
-            </Typography>
-            <Box
-              paddingTop='50px'
-              paddingLeft='150px'
-            >
-              <Button
-                onClick={handleScrollToBottom}
-                variant="contained"
-                color={darkTheme ? "secondary" : "primary"}
+            <Grid item xs={12}>
+              <Typography
+                variant="h2"
                 sx={{
-                  borderRadius: "25px",
-                  padding: "15px 30px",
-                  fontSize: "16px",
-                  '&:focus': { outline: 'none' }
+                  paddingLeft: '50px',
+                  pt: '60px',
+                  color: darkTheme ? 'white' : 'black',
+                  lineHeight: "1.5",
+                  fontFamily: "Roboto Mono",
+                  fontWeight: "Bold",
                 }}
               >
-                Scroll Down
-              </Button>
-            </Box>
+                Meet TalentX
+              </Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  color: darkTheme ? 'white' : 'black',
+                  lineHeight: "1.5",
+                  paddingLeft: '50px'
+                }}>
+                Get the most skilled workforce at the most affordable pricing
+                <br />
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
+              </Typography>
+              <Box
+                paddingTop='50px'
+                paddingLeft='150px'
+              >
+                <Button
+                  onClick={handleScrollToBottom}
+                  variant="contained"
+                  color={darkTheme ? "secondary" : "primary"}
+                  sx={{
+                    borderRadius: "25px",
+                    padding: "15px 30px",
+                    fontSize: "16px",
+                    '&:focus': { outline: 'none' }
+                  }}
+                >
+                  Scroll Down
+                </Button>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
         </Box>
         <Box
           paddingTop='60px'
@@ -113,36 +115,37 @@ function Home({ darkTheme }) {
         >
           <Grid container spacing={2}>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
-            <img
-                  src={webLight}
-                  alt="Your Image"
-                  style={{ width: "78%", height: '86%', paddingBottom:0}}
-                  />
+              <img
+                src={webLight}
+                alt="Your Image"
+                style={{ width: "78%", height: '86%', paddingBottom: 0 }}
+              />
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
-            
+
               <h1>Web Development</h1>
               <Typography>
-                  this is the details about the web development field of operation and its working
+                this is the details about the web development field of operation and its working
               </Typography>
             </Grid>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
-              <h1>Description 2  / image Will be here</h1>
-              <Typography>
+              <h1 style={{ paddingLeft: '30px' }}>Finance</h1>
+              <Typography paddingLeft={'30px'}>
                 this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
-              <h1>Title 2  / image Will be here</h1>
-              <Typography>
-                this is the details about the title one which will go here below the title of the thingy thing thing
-              </Typography>
+              <img
+                src={Finance}
+                alt="Your Image"
+                style={{ width: "78%", height: '86%', paddingBottom: 0 }}
+              />
             </Grid>
           </Grid>
 
           <br />
-          {showScrollButton &&(
-          <Tooltip title = 'Scroll to Top'>
+          {showScrollButton && (
+            <Tooltip title='Scroll to Top'>
               <Button
                 onClick={handleScrollToTop}
                 variant="contained"
@@ -160,14 +163,14 @@ function Home({ darkTheme }) {
                   '&:focus': { outline: 'none' }
                 }}
               >
-                  <ArrowUpwardRoundedIcon/>
+                <ArrowUpwardRoundedIcon />
 
               </Button>
             </Tooltip>
           )}
 
         </Box>
-        
+
       </Box>
     </>
   );
