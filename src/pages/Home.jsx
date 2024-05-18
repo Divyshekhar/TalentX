@@ -72,6 +72,7 @@ function Home({ darkTheme }) {
                 fontFamily: "Roboto Mono",
                 fontWeight: "Bold",
               }}
+              data-aos='fade-right'
             >
               Meet TalentX
             </Typography>
@@ -80,7 +81,7 @@ function Home({ darkTheme }) {
               sx={{color: darkTheme?'white':'black', 
                   lineHeight: "1.5", 
                   paddingLeft: '50px' 
-              }}>
+              }} data-aos='fade-right'>
               Get the most skilled workforce at the most affordable pricing
               <br />
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?

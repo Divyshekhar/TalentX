@@ -100,7 +100,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center">
+                  <Typography display='flex' justifyContent={'center'}>
                     <NavLink to={page.path}>{page.name}</NavLink>
                     </Typography>
                 </MenuItem>

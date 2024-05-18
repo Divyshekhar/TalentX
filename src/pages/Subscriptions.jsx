@@ -1,9 +1,14 @@
 import { Box, Button, Grid, Tooltip, Typography } from "@mui/material";
 import PropTypes from 'prop-types';
-import month3 from '../assets/3month.jpeg';
-import month6 from '../assets/6month.jpeg';
-import month9 from '../assets/9month.jpeg';
-import month12 from '../assets/12month.jpeg';
+import month3Dark from '../assets/3month.jpeg';
+import month6Dark from '../assets/6month.jpeg';
+import month9Dark from '../assets/9month.jpeg';
+import month12Dark from '../assets/12month.jpeg';
+import month3Light from '../assets/3monthsLight.jpeg';
+import month6Light from '../assets/6monthsLight.jpeg';
+import month9Light from '../assets/9monthsLight.jpeg';
+import month12Light from '../assets/12monthsLight.jpeg';
+
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
@@ -75,10 +80,10 @@ function Subscriptions({ darkTheme }) {
                     </Button>
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
-                    <img src={month3} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={darkTheme?month3Dark:month3Light}  alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-right' data-aos-delay='100' >
-                    <img src={month6} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={darkTheme?month6Dark:month6Light} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
                     <Typography sx={{ fontSize: '20px' }}>
@@ -128,10 +133,10 @@ function Subscriptions({ darkTheme }) {
 
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
-                    <img src={month9} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={darkTheme?month9Dark:month9Light} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-right' data-aos-delay='100'>
-                    <img src={month12} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={darkTheme?month12Dark:month12Light} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
                     <Typography sx={{ fontSize: '20px' }}>
