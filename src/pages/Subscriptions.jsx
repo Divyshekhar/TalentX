@@ -133,10 +133,10 @@ function Subscriptions({ darkTheme }) {
 
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
-                    <img src={darkTheme?month9Dark:month9Light} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={month9} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-right' data-aos-delay='100'>
-                    <img src={darkTheme?month12Dark:month12Light} alt="3monthlogo" width={'70%%'} height={'50%'} />
+                    <img src={month12} alt="3monthlogo" width={'70%%'} height={'50%'} />
                 </Grid>
                 <Grid item xs={6} data-aos='fade-left' data-aos-delay='100'>
                     <Typography sx={{ fontSize: '20px' }}>

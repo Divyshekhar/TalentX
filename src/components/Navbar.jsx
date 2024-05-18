@@ -120,7 +120,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: darkTheme?"whtie":"black",
+              color: darkTheme?"white":"black",
               textDecoration: 'none',
               fontSize: '20px'
             }}
