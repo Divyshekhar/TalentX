@@ -2,16 +2,21 @@ import { Box, Button, Grid, Typography, Tooltip} from "@mui/material";
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import PropTypes from "prop-types";
 import backgroundImg from '../assets/back2.jpeg'
+import Finance from '../assets/finance.jpg'
 import webLight from '../assets/web light.png'
 import { useRef, useState, useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import VanillaTilt from 'vanilla-tilt';
+
 
 function Home({ darkTheme }) {
 
   const topSectionRef = useRef(null);
   const bottomSectionRef = useRef(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const webLightRef = useRef(null);
+  const financeRef = useRef(null);
 
   useEffect(() => {
 
@@ -33,6 +38,32 @@ function Home({ darkTheme }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const options = {
+      scale: 1.2,
+      speed: 1000,
+      max: 30,
+    };
+
+    if (webLightRef.current) {
+      VanillaTilt.init(webLightRef.current, options);
+    }
+
+    if (financeRef.current) {
+      VanillaTilt.init(financeRef.current, options);
+    }
+
+    return () => {
+      if (webLightRef.current && webLightRef.current.vanillaTilt) {
+        webLightRef.current.vanillaTilt.destroy();
+      }
+      if (financeRef.current && financeRef.current.vanillaTilt) {
+        financeRef.current.vanillaTilt.destroy();
+      }
+    };
+  }, []);
+
 
   const handleScrollToBottom = () => {
     bottomSectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -118,6 +149,7 @@ function Home({ darkTheme }) {
                   src={webLight}
                   alt="Your Image"
                   style={{ width: "78%", height: '86%', paddingBottom:0}}
+                  ref={webLightRef}
                   />
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
@@ -128,16 +160,18 @@ function Home({ darkTheme }) {
               </Typography>
             </Grid>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
-              <h1>Description 2  / image Will be here</h1>
-              <Typography>
+              <h1 style={{ paddingLeft: '30px' }}>Finance</h1>
+              <Typography paddingLeft={'30px'}>
                 this is the details about the title one which will go here below the title of the thingy thing thing
               </Typography>
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
-              <h1>Title 2  / image Will be here</h1>
-              <Typography>
-                this is the details about the title one which will go here below the title of the thingy thing thing
-              </Typography>
+              <img
+                src={Finance}
+                alt="Your Image"
+                style={{ width: "78%", height: '86%', paddingBottom: 0 }}
+                ref={financeRef}
+              />
             </Grid>
           </Grid>
 
