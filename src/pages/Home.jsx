@@ -8,6 +8,7 @@ import { useRef, useState, useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import VanillaTilt from 'vanilla-tilt';
+import '../components/Home.css';
 
 
 function Home({ darkTheme }) {
@@ -103,7 +104,7 @@ function Home({ darkTheme }) {
                 fontFamily: "Roboto Mono",
                 fontWeight: "Bold",
               }}
-              data-aos='fade-right'
+              className="slide-in-left"
             >
               Meet TalentX
             </Typography>
@@ -112,7 +113,7 @@ function Home({ darkTheme }) {
               sx={{color: darkTheme?'white':'black', 
                   lineHeight: "1.5", 
                   paddingLeft: '50px' 
-              }} data-aos='fade-right'>
+              }} className="slide-in-left">
               Get the most skilled workforce at the most affordable pricing
               <br />
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Nam repellat, facilis deserunt aliquam vero, <br />saepe fuga nisi esse similique vel libero ipsum, labore hic <br />sint accusamus impedit provident sed illo?
@@ -131,6 +132,7 @@ function Home({ darkTheme }) {
                   fontSize: "16px",
                   '&:focus': { outline: 'none' }
                 }}
+                className="slide-in-left"
               >
                 Scroll Down
               </Button>
