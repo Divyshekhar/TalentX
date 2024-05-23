@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -22,8 +22,22 @@ const pages = [
 
 ];
 
+
 function NavBar({ darkTheme, setDarkTheme }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [show, setShow] = useState('true');
+  const showNavBar  =() =>{
+      if(window.scrollY < 10)
+        {
+          setShow(true);
+        }
+      else
+      {
+        setShow(false);
+      }
+  }
+
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -33,12 +47,21 @@ function NavBar({ darkTheme, setDarkTheme }) {
     setAnchorElNav(null);
   };
 
+  useEffect(() => {
+      window.addEventListener('scroll', showNavBar);
+      return () => {
+        window.removeEventListener('scroll', showNavBar);
+      }
+  }, [])
+
+
+
 
   return (
-    <AppBar position="fixed" sx={{
+    <AppBar position="fixed"  sx={{
         backgroundColor: darkTheme?'rgb(156,39,176)':'rgba(25,118,210,1)',
-        transition: 'backgroundColor 0.3s ease-in-out'
-        
+        transition: 'backgroundColor 0.3s ease-in-out ,  top 0.1s ease-out',
+        top: show ? '0' : '-70px'
         }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>

@@ -140,12 +140,14 @@ function Home({ darkTheme }) {
           </Grid>
         </Grid>
         </Box>
+
         <Box
           paddingTop='60px'
           ref={bottomSectionRef}
           color={darkTheme ? "white" : "black"}
         >
           <Grid container spacing={2}>
+          <Box sx={{backgroundColor: darkTheme ? "rgb(156,39,176)": 'rgba(25,118,210,1)', width: '100vw', display:'flex', color: darkTheme? 'white' : 'black'}}>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
             <img
                   src={webLight}
@@ -161,6 +163,7 @@ function Home({ darkTheme }) {
                   this is the details about the web development field of operation and its working
               </Typography>
             </Grid>
+            </Box>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
               <h1 style={{ paddingLeft: '30px' }}>Finance</h1>
               <Typography paddingLeft={'30px'}>
@@ -171,7 +174,7 @@ function Home({ darkTheme }) {
               <img
                 src={Finance}
                 alt="Your Image"
-                style={{ width: "78%", height: '86%', paddingBottom: 0 }}
+                style={{ width: "78%", height: '86%', paddingBottom: 0, paddingTop: 10 }}
                 ref={financeRef}
               />
             </Grid>
