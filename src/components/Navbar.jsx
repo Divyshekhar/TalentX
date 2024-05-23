@@ -27,7 +27,7 @@ function NavBar({ darkTheme, setDarkTheme }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [show, setShow] = useState('true');
   const showNavBar  =() =>{
-      if(window.scrollY < 10)
+      if(window.scrollY < 60)
         {
           setShow(true);
         }
