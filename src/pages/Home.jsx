@@ -159,15 +159,19 @@ function Home({ darkTheme }) {
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
             
               <h1>Web Development</h1>
-              <Typography>
-                  this is the details about the web development field of operation and its working
+              <Typography fontSize={'20px'}>
+                  this is the details about the web development field of operation and its working<br/>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa harum iure recusandae quam repellendus sit doloremque, <br/> 
+                  esse blanditiis libero expedita veniam vero voluptas! Similique, magnam minus rerum a at incidunt.
               </Typography>
             </Grid>
             </Box>
             <Grid item xs={6} data-aos='fade-right' data-aos-delay='200'>
               <h1 style={{ paddingLeft: '30px' }}>Finance</h1>
-              <Typography paddingLeft={'30px'}>
-                this is the details about the title one which will go here below the title of the thingy thing thing
+              <Typography paddingLeft={'30px'} fontSize={'20px'}>
+                  this is the details about the Finance field of operation and its working<br/>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa harum iure recusandae quam repellendus sit doloremque, <br/> 
+                  esse blanditiis libero expedita veniam vero voluptas! Similique, magnam minus rerum a at incidunt.
               </Typography>
             </Grid>
             <Grid item xs={6} data-aos='fade-left' data-aos-delay='200'>
